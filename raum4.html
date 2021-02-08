@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-assets>
+        <!-- Vierter Therapieraum -->
+
+        <a-asset-item id="raum4" src="raum1/Raum1.dae"></a-asset-item>
+        <a-asset-item id="wanddeko4" src="wanddeko/wanddeko.dae"></a-asset-item>
+        <a-asset-item id="highboard4" src="highboard/highboard.dae"></a-asset-item>
+        <a-asset-item id="blume4" src="blumen/blumen.dae"></a-asset-item>
+        <a-asset-item id="tuer4" src="tuer/tuer.dae"></a-asset-item>
+        <a-asset-item id="tuer41" src="tuer/tuer.dae"></a-asset-item>
+    </a-assets>
+
+    <!-- Vierter Therapieraum -->
+
+    <a-entity collada-model="#raum4" position="-9.51 0 0.017" scale="0.030 0.030 0.030"></a-entity>
+    <a-entity collada-model="#blume4" position="-3.83 0 -6.66" scale="1.5 1.5 1.5" rotation="0 65.32 0"></a-entity>
+    <a-entity collada-model="#wanddeko4" position="-2.12 3.075 -5.015" scale="2 2 2" rotation="0 -90 0"></a-entity>
+    <a-entity collada-model="#highboard4"  position="-8.42 0 -2.62" scale="2.270 1.960 1.760" rotation="0 90 0"></a-entity>
+    <a-entity collada-model="#tuer4" position="-5.82 0 -8.53" scale=" 2.721 1.321 1.600" rotation="0 -90 0" navigate-on-click="href: raum5.html"></a-entity>
+    <a-entity collada-model="#tuer41" position="-6.37 0 -0.06" scale=" 2.721 1.321 1.600" rotation="0 90.0 0" navigate-on-click="href: raum3.html"></a-entity>
+
+    <a-entity camera="" position="-5.45 2.60 -4.43" look-controls wasd-controls cursor="rayOrigin: mouse">
+        <a-cursor></a-cursor>
+    </a-entity>
+    <a-plane position="-5.67 4.197 -4.28" rotation = "90 0 0"  scale=" 0.766 0.233 1.0"  width="10" height = "40" color="#F5F5DC"></a-plane >
+
+    <a-entity position="-7.41 2.49 -8.06" scale=" 0.80 0.90 0.90" high="auto" width="auto"
+              text="width: 4; value: Sie befinden sich nun in der vierten Stufe der Therapieanwendung
+              fuer die naechste Stufe 'klicken Sie auf diese Tuer."></a-entity>
+
+    <a-entity position="-4.31 2.147 -0.55"  rotation="0 -180 0 " scale=" 1 1 1 " high="auto" width="auto"
+              text="width: 4; value: Wenn Sie zurueck zur dritten Stufe wollen 'klicken' Sie auf diese Tuer."></a-entity>
+</a-scene>
+
+</body>
+</html>

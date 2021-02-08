@@ -1,0 +1,82 @@
+<html>
+<head>
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+  <script src="js/main.js"></script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  <script src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+</head>
+<body>
+<a-scene>
+
+  <a-assets>
+    <!-- Start-->
+
+    <a-asset-item id="raum0" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="sofa0" src="Sofa/sofa.dae"></a-asset-item>
+    <a-asset-item id="sideboard0" src="sideboard/sideboard.dae"></a-asset-item>
+    <a-asset-item id="stehlampe0" src="stehlampe/stehlampe.dae"></a-asset-item>
+    <a-asset-item id="highboard0" src="highboard/highboard.dae"></a-asset-item>
+    <a-asset-item id="sideboard10" src="sideboard1/sideboard1.dae"></a-asset-item>
+    <a-asset-item id="teppich0" src="teppich/teppich.dae"></a-asset-item>
+    <a-asset-item id="blume0" src="blumen/blumen.dae"></a-asset-item>
+    <a-asset-item id="sessel0" src="sessel/sessel.dae"></a-asset-item>
+    <a-asset-item id="bildpalme0" src="bildpalme/bildpalme.dae"></a-asset-item>
+    <a-asset-item id="palme0" src="palme/palme.dae"></a-asset-item>
+    <a-asset-item id="wanddeko0" src="wanddeko/wanddeko.dae"></a-asset-item>
+    <a-asset-item id="tisch0" src="tisch/tisch.dae"></a-asset-item>
+    <a-asset-item id="tuer0" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer01" src="tuer/tuer.dae"></a-asset-item>
+
+  </a-assets>
+
+
+
+<!-- Start-->
+  <a-entity collada-model="#raum0" position="-13.0 0 19.174" scale="0.110 0.040 0.070" ></a-entity>
+  <a-entity collada-model="#sofa0" position="10.440 0 19.433" scale="2.340 1.360 2.160" rotation="0 128.40 0"></a-entity>
+  <a-entity collada-model="#sofa0" position="15.44 0 8.619" scale="2.340 1.360 2.160" rotation="0 -139.0 0"></a-entity>
+  <a-entity collada-model="#sideboard0"  position="-10.70 0 10.644" scale="2.5 2 2.5" rotation="0 90.45 0"></a-entity>
+  <a-entity collada-model="#sideboard10" position="8.798 0 0.554" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#stehlampe0" position="12.71 0 16.862" scale="2.60 1.660 2.060" rotation="0 -158.0 0"></a-entity>
+  <a-entity collada-model="#highboard0"  position="-10.90 0 8.190" scale="2.270 1.960 1.760" rotation="0 90.23 0"></a-entity>
+  <a-entity collada-model="#teppich0" position="4.067 0.176 7.066" scale="4.020 0.250 3.740" rotation="0 -89.49 0"></a-entity>
+  <a-entity collada-model="#blume0"  position="-11.3 0 1.045" scale="2 2 2"></a-entity>
+  <a-entity collada-model="#sessel0" position="-8.90 0 13.422" scale="2 2 2" rotation="0 124.2 0"></a-entity>
+  <a-entity collada-model="#bildpalme0" position="7.592 0.167 0.173" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#palme0" position="2.183 0 16.843" scale="2 2 2"></a-entity>
+  <a-entity collada-model="#wanddeko0" position="7.585 3.207 18.035" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#wanddeko0" position="5.485 3.238 18.035" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#tisch0" position="7.145 0 13.547" scale="4.256 2 3.580"></a-entity>
+  <a-entity collada-model="#tuer0" position="-6.5 0 -0.14" scale="2.721 1.321 1.600" rotation="0 -90 0" navigate-on-click="href: raum1.html"></a-entity>
+
+
+  <a-entity camera="" position="0.95 2.6 10" look-controls wasd-controls cursor="rayOrigin: mouse">
+    <a-cursor></a-cursor>
+  </a-entity>
+
+
+
+  <a-sky id="skybox" color="white"></a-sky>
+
+
+  <!--Decke von den Räumen-->
+  <a-plane position="1.295 5.564 8.940" rotation = "90 0 0"  scale=" 0.955 -0.50 1.0"  width="30" height = "40" color="#F5F5DC"></a-plane >
+
+
+  <!-- Text-->
+
+  <a-entity position="-1.18 3.050 0.146" scale=" 1.5 1.5 1.5" high="auto" width="auto"
+          text="width: 4; value: Hallo, diese VR-Anwendung dient als Hilfestellung fur eine gestufte Selbsttherapie
+          bei klaustrophobischen Angeststoerungen.
+          Machen Sie sich zunaechst mit dem jeweiligen Raum vertraut, indem Sie sich mithilfe des Cursors im Raum bewegen.
+          Durch eine 'klicken' auf die Tueren im Raum gelangen Sie in die naechsen Raeme, die zunehmend kleiner und enger werden.
+          Weitere Anweisungen finden Sie in den naechsten Raeumen.
+          Viel Erfolg!"></a-entity>
+
+</a-scene>
+</body>
+</html>

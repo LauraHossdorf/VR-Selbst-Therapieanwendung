@@ -1,0 +1,59 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+</head>
+<body>
+
+<a-scene>
+    <a-assets>
+
+<!-- Zweiter Therapieraum-->
+
+        <a-asset-item id="raum2" src="raum1/Raum1.dae"></a-asset-item>
+        <a-asset-item id="sofa2" src="Sofa/sofa.dae"></a-asset-item>
+        <a-asset-item id="stehlampe2" src="stehlampe/stehlampe.dae"></a-asset-item>
+        <a-asset-item id="sideboard2" src="sideboard1/sideboard1.dae"></a-asset-item>
+        <a-asset-item id="teppich2" src="teppich/teppich.dae"></a-asset-item>
+        <a-asset-item id="blume2" src="blumen/blumen.dae"></a-asset-item>
+        <a-asset-item id="bildpalme2" src="bildpalme/bildpalme.dae"></a-asset-item>
+        <a-asset-item id="palme2" src="palme/palme.dae"></a-asset-item>
+        <a-asset-item id="tisch2" src="tisch/tisch.dae"></a-asset-item>
+        <a-asset-item id="tuer2" src="tuer/tuer.dae"></a-asset-item>
+        <a-asset-item id="tuer21" src="tuer/tuer.dae"></a-asset-item>
+
+    </a-assets>
+
+    <!-- Zweiter Therapieraum-->
+
+    <a-entity collada-model="#raum2" position="-11.9 0 -8.94" scale="0.060 0.030 0.040" rotation="0 -90 0"></a-entity>
+    <a-entity collada-model="#sofa2" position="0.203 0 -4.08" scale="2.340 1.360 2.160" rotation="0 -139.0 0"></a-entity>
+    <a-entity collada-model="#sideboard2" position="-10.5 0 -0.114" scale="2.5 2 2.5" rotation="0 90 0"></a-entity>
+    <a-entity collada-model="#stehlampe2" position="-1.53 0.252 4.017" scale="1.950 1.490 2.060" rotation="0 -158.0 0"></a-entity>
+    <a-entity collada-model="#teppich2" position="-9.25 0.210 -3.72" scale="3.280 2.5 2.900" rotation="0 -90 0"></a-entity>
+    <a-entity collada-model="#blume2" position="-2.94 0 -5.67" scale="1.5 1.5 1.5"></a-entity>
+    <a-entity collada-model="#bildpalme2" position="-11.25 0.627 1.061 " scale="1.8 1.8 1.8" rotation="0 90 0" ></a-entity>
+    <a-entity collada-model="#tuer2" position="-6.5 0 -8.48" scale=" 2.721 1.321 1.600" rotation="0 -90 0" navigate-on-click="href: raum3.html"></a-entity>
+    <a-entity collada-model="#tuer21" position="-5 0 6.116" scale=" 2.721 1.321 1.600" rotation="0 90 0" navigate-on-click="href: raum1.html"></a-entity>
+
+    <a-entity camera="" position="-6.11 2.60 -1.517" look-controls wasd-controls cursor="rayOrigin: mouse">
+        <a-cursor></a-cursor>
+    </a-entity>
+    <a-plane position="-6.25 4.197 -1.082" rotation = "90 0 0"  scale=" 1.135 0.39 1.0"  width="10" height = "40" color="#F5F5DC"></a-plane >
+
+    <a-entity position="-8.80 2.49 -8.05" scale=" 1.150 1.150 1.150" high="auto" width="auto"
+              text="width: 4; value: Sie befinden sich nun in der zweiten Stufe der Therapieanwendung
+              fuer die naechste Stufe 'klicken Sie auf diese Tuer."></a-entity>
+
+    <a-entity position="-9.05 2.147 5.792"  rotation="0 -180 0 " scale=" 1 1 1 " high="auto" width="auto"
+              text="width: 4; value: Wenn Sie zurueck zur ersten Stufe wollen 'klicken' Sie auf diese Tuer."></a-entity>
+
+</a-scene>
+</body>
+</html>

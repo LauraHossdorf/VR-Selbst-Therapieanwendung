@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-assets>
+        <!-- Fünfter Therapieraum -->
+
+        <a-asset-item id="raum5" src="raum1/Raum1.dae"></a-asset-item>
+        <a-asset-item id="wanddeko5" src="wanddeko/wanddeko.dae"></a-asset-item>
+        <a-asset-item id="tuer5" src="tuer/tuer.dae"></a-asset-item>
+        <a-asset-item id="tuer51" src="tuer/tuer.dae"></a-asset-item>
+    </a-assets>
+
+    <!-- Fünfter Therapieraum -->
+
+    <a-entity collada-model="#raum5" position="-8.36 0 0" scale="0.020 0.030 0.020"></a-entity>
+    <a-entity collada-model="#wanddeko5" position="-3.43 3.475 -3.47" scale="2 2 2" rotation="0 -90 0"></a-entity>
+    <a-entity collada-model="#tuer5" position="-6.5 0 0.072" scale=" 2.721 1.321 1.600" rotation="0 90 0" navigate-on-click="href: index.html"></a-entity>
+
+    <a-entity camera="" position="-5.92 2.60 -2.86" look-controls wasd-controls cursor="rayOrigin: mouse">
+        <a-cursor></a-cursor>
+    </a-entity>
+    <a-plane position="-5.78 4.197 -2.87" rotation = "90 0 0"  scale=" 0.49 0.148 1.0"  width="10" height = "40" color="#F5F5DC"></a-plane >
+
+    <a-entity position="-5.67 2.49 -5.412" scale=" 1.150 1.150 1.150" high="auto" width="auto"
+              text="width: 4; value: Sehr gut! Sie haben die Anwendung erfolgreich beendet, um die Anwendung erneut zu starten 'klicken'Sie auf die Tuer."></a-entity>
+
+</a-scene>
+
+</body>
+</html>

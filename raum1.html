@@ -1,0 +1,62 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/showcase/link-traversal/js/components/link-controls.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+    <a-assets>
+
+<!-- Erster Therapieraum-->
+
+        <a-asset-item id="raum1" src="raum1/Raum1.dae"></a-asset-item>
+        <a-asset-item id="sofa1" src="Sofa/sofa.dae"></a-asset-item>
+        <a-asset-item id="sessel1" src="sessel/sessel.dae"></a-asset-item>
+        <a-asset-item id="stehlampe1" src="stehlampe/stehlampe.dae"></a-asset-item>
+        <a-asset-item id="sideboard1" src="sideboard1/sideboard1.dae"></a-asset-item>
+        <a-asset-item id="teppich1" src="teppich/teppich.dae"></a-asset-item>
+        <a-asset-item id="blume1" src="blumen/blumen.dae"></a-asset-item>
+        <a-asset-item id="bildpalme1" src="bildpalme/bildpalme.dae"></a-asset-item>
+        <a-asset-item id="palme1" src="palme/palme.dae"></a-asset-item>
+        <a-asset-item id="tisch1" src="tisch/tisch.dae"></a-asset-item>
+        <a-asset-item id="tuer1" src="tuer/tuer.dae"></a-asset-item>
+        <a-asset-item id="tuer11" src="tuer/tuer.dae"></a-asset-item>
+    </a-assets>
+
+<!-- Erster Therapieraum -->
+
+        <a-entity collada-model="#raum1" position="0.85 0 -0.337" scale="0.070 0.030 0.050" rotation="0 90 0"></a-entity>
+        <a-entity collada-model="#sofa1" position="-14.0 0 -4.519" scale="2.340 1.360 2.160" rotation="0 40 0"></a-entity>
+        <a-entity collada-model="#sessel1" position="-2.76 0 -16.27" scale="2 2 2" rotation="0 -50.6 0"></a-entity>
+        <a-entity collada-model="#sideboard1" position="-0.46 0 -8.88" scale="2.5 2 2.5" rotation="0 -90 0"></a-entity>
+        <a-entity collada-model="#stehlampe1" position="-11.5 0.252 -3.116" scale="1.950 1.490 2.060" rotation="0 90.00 0"></a-entity>
+        <a-entity collada-model="#teppich1" position="-10.2 0.210 -11.05" scale="3.590 2.200 3.410" rotation="0 -90 0"></a-entity>
+        <a-entity collada-model="#blume1" position="-12.5 0 -17.30" scale="1.5 1.5 1.5"></a-entity>
+        <a-entity collada-model="#bildpalme1" position="0.04 0.621 -9.44" scale="1.8 1.8 1.8" rotation="0 -90 0" ></a-entity>
+        <a-entity collada-model="#tisch1" position="-8.66 0 -7.865" scale="4 2 4"></a-entity>
+        <a-entity collada-model="#tuer1" position="-6.5 0 -17.89" scale=" 2.721 1.321 1.600" rotation="0 -90 0" navigate-on-click="href: raum2.html"></a-entity>
+        <a-entity collada-model="#tuer11" position="-5 0 -0.817" scale=" 2.721 1.321 1.600" rotation="0 90.0 0" navigate-on-click="href: index.html"></a-entity>
+
+        <a-entity camera="" position="-5.5 2.60 -9.65" look-controls wasd-controls cursor="rayOrigin: mouse">
+            <a-cursor></a-cursor>
+        </a-entity>
+
+        <a-plane position="-6.25 4.197 -9.40" rotation = "90 0 0"  scale=" 1.395 0.429 1.0"  width="10" height = "40" color="#F5F5DC"></a-plane >
+
+    <a-entity position="-9.22 2.49 -17.47" scale=" 1.150 1.150 1.150" high="auto" width="auto"
+              text="width: 4; value: Sie befinden sich nun in der ersten Stufe der Therapieanwendung
+              fuer die naechste Stufe 'klicken Sie auf diese Tuer."></a-entity>
+
+    <a-entity position="-2.51 2.147 -1.273"  rotation="0 -180 0 " scale=" 1.150 1.150 1.150" high="auto" width="auto"
+              text="width: 4; value: Wenn Sie zurueck zur Startseite wollen 'klicken' Sie auf diese Tuer."></a-entity>
+</a-scene>
+</body>
+</html>
